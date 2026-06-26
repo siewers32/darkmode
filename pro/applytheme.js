@@ -19,5 +19,21 @@ function setTheme(newTheme) {
     applyTheme();
 }
 
+function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme') || 'system';
+    let newTheme;
+
+    if (currentTheme === 'light') {
+        newTheme = 'dark';
+    } else if (currentTheme === 'dark') {
+        newTheme = 'light';
+    } else {
+        // Als het systeemthema wordt gebruikt, schakelen we naar donker als voorbeeld
+        newTheme = 'dark';
+    }
+
+    setTheme(newTheme);
+}
+
 // Voer dit uit zodra de pagina laadt
 applyTheme();

@@ -18,6 +18,15 @@
             }
         }
 
+        .svg-icon {
+            fill: var(--text-color);
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+
         /* 3. Handmatige Overrides (Als JavaScript een specifiek thema dwingt) */
         html[data-theme="light"] {
             --bg-color: #ffffff;
