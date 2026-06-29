@@ -26,6 +26,14 @@
             margin-right: 8px;
         }
 
+        .svg-icon-hidden {
+            display: none;
+        }
+
+        .svg-icon-visible {
+            display: inline-block;
+        }
+
 
         /* 3. Handmatige Overrides (Als JavaScript een specifiek thema dwingt) */
         html[data-theme="light"] {

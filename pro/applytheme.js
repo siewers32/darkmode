@@ -21,12 +21,23 @@ function setTheme(newTheme) {
 
 function toggleTheme() {
     const currentTheme = localStorage.getItem('theme') || 'system';
+    darkIcon = document.getElementById('svg-dark');
+    lightIcon = document.getElementById('svg-light');
+
     let newTheme;
+
 
     if (currentTheme === 'light') {
         newTheme = 'dark';
+        console.log('Switching to dark theme');
+        lightIcon.classList.add('svg-icon-hidden');
+        darkIcon.classList.remove('svg-icon-hidden');
+        darkIcon.classList.add('svg-icon-visible');
     } else if (currentTheme === 'dark') {
         newTheme = 'light';
+        darkIcon.classList.add('svg-icon-hidden');
+        lightIcon.classList.remove('svg-icon-hidden');
+        lightIcon.classList.add('svg-icon-visible');
     } else {
         // Als het systeemthema wordt gebruikt, schakelen we naar donker als voorbeeld
         newTheme = 'dark';

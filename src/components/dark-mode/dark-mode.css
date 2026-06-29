@@ -1,0 +1,37 @@
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    fill:hsl(0, 0%, 96%)
+}
+
+.button-back {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button.dark-mode .sun-beams {
+    opacity: 0;
+    transform: rotate(45deg); /* Draait subtiel weg tijdens het verdwijnen */
+}
+
+button.dark-mode .sun-moon-core {
+    transform: scale(1.3); /* Maakt de kern iets groter voor de maan */
+    mask: url(#moon-mask);
+    fill: white;
+}
+
+/* Schuif de 'hap' (zwarte cirkel) op de juiste plek in dark mode */
+button.dark-mode .moon-bite {
+    transform: translate(-7px, 3px);
+}
+
+
+.sun-beams, .sun-moon-core, .moon-bite {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    transform-origin: center;
+}
